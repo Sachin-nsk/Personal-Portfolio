@@ -1,0 +1,261 @@
+---
+import '../styles/global.css';
+
+const links = {
+  email: 'sachinkumar.n08@gmail.com',
+  github: 'https://github.com/Sachin-nsk',
+  linkedin: 'https://www.linkedin.com/in/sachin-kumar-n/',
+  leetcode: 'https://leetcode.com/u/sachin_kumar_n/',
+  trackifyRepo: 'https://github.com/Sachin-nsk/trackify',
+  trackifyLive: 'https://trackify-app-999910686309.asia-south1.run.app',
+};
+
+// Shown in the Patent section. Add status/date/office/url fields if you want them displayed; set to null to hide.
+const patent: null | { title: string; number: string; status?: string; applicant?: string; date?: string; office?: string; inventors?: string; url?: string } = {
+  title: 'Blockchain-Enabled System And Method For Secure Credential Management Using Biometric Authentication And Cryptography',
+  number: '202641022786',
+  status: 'Published · under examination',
+  date: 'Filed 26 Feb 2026 · Published 6 Mar 2026 (u/s 11A)',
+  office: 'Indian Patent Office · Ordinary application',
+  applicant: 'Vellore Institute of Technology',
+};
+
+const stack = [
+  { k: 'languages', v: ['Java', 'SQL', 'PL/SQL', 'Python', 'C', 'C++'] },
+  { k: 'backend', v: ['Spring Boot', 'Kafka', 'Spring Kafka', 'JMS / Oracle AQ', 'WebFlux'] },
+  { k: 'data', v: ['Oracle', 'MongoDB', 'PostgreSQL', 'MySQL'] },
+  { k: 'infra', v: ['Docker', 'Kubernetes', 'Helm', 'Argo CD', 'KEDA', 'Azure DevOps'] },
+  { k: 'observability', v: ['Prometheus', 'Grafana', 'Micrometer', 'OpenTelemetry', 'ClickStack'] },
+  { k: 'ai-tooling', v: ['Claude Code', 'MCP', 'Agent workflows', 'Gemini API'] },
+];
+
+const certs = [
+  { n: 'AWS Certified Cloud Practitioner', u: 'https://www.credly.com/badges/2d6e16eb-e8ae-4a40-bd1b-5b7fef15879e/linked_in_profile' },
+  { n: 'Oracle Cloud Infrastructure 2023 AI Certified Foundations Associate', u: 'https://catalog-education.oracle.com/pls/certview/sharebadge?id=691C0FA069C51F301886F6D06A45F78B9FC9955E3809398B549B9DD95796F878' },
+  { n: 'Supervised Machine Learning: Regression and Classification (Stanford, Coursera)', u: 'https://www.coursera.org/account/accomplishments/verify/U6GQU8MB7UKT' },
+  { n: 'Google Data Analytics Professional Certificate', u: 'https://www.credly.com/badges/42b3ba6c-f4ec-4e64-a5ca-4069a5f7c7a6/public_url' },
+];
+
+let n = 0;
+const num = () => String(++n).padStart(2, '0');
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sachin Kumar N · Backend Engineer</title>
+    <meta name="description" content="Sachin Kumar N — Associate Software Development Engineer building backend systems and internal tooling with Java, Spring Boot, Kafka and observability. Bangalore, India." />
+    <meta property="og:title" content="Sachin Kumar N · Backend Engineer" />
+    <meta property="og:description" content="Backend systems, reliability, observability and AI-assisted engineering." />
+    <meta name="theme-color" content="#05070a" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="nav">
+      <a href="#top" class="logo">sachin<span>@</span>dev<span class="blink">_</span></a>
+      <nav>
+        <a href="#principles">principles</a>
+        <a href="#work">work</a>
+        <a href="#stack">stack</a>
+        <a href="#projects">projects</a>
+        {patent && <a href="#patent">patent</a>}
+        <a href="#contact">contact</a>
+      </nav>
+      <button id="open-term" class="kbd-btn" aria-label="Open terminal"><kbd>Ctrl</kbd>+<kbd>K</kbd> terminal</button>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <canvas id="orbit" aria-label="Interactive constellation of technologies"></canvas>
+        <div class="hero-text">
+          <p class="eyebrow">// associate software development engineer · backend · bangalore</p>
+          <h1>Sachin <span class="grad">Kumar N</span></h1>
+          <p class="typed"><span id="typed"></span><span class="blink">▍</span></p>
+          <div class="cta">
+            <a class="btn primary" href="#work">See what I've built</a>
+            <button class="btn" id="open-term-2">$ open terminal</button>
+            <a class="btn ghost" href={links.github} target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </div>
+        <p class="hud-hint">move your cursor · click to send a pulse through the graph</p>
+      </section>
+
+      <section id="principles" class="wrap">
+        <h2><span class="num">{num()}</span> How I approach engineering</h2>
+        <div class="grid3">
+          <article class="card">
+            <h3>Design for failure</h3>
+            <p>Dependencies will be slow, down or wrong. Timeouts, retries and clear failure paths decide how a system behaves on a bad day.</p>
+          </article>
+          <article class="card">
+            <h3>Measure, then optimise</h3>
+            <p>Instrument and profile first, so performance work goes after real bottlenecks instead of guesses.</p>
+          </article>
+          <article class="card">
+            <h3>Keep it simple</h3>
+            <p>Small changes, clear boundaries, tests and honest code reviews: code the next engineer can read and trust.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="work" class="wrap">
+        <h2><span class="num">{num()}</span> Work</h2>
+        <div class="job">
+          <div class="job-head">
+            <div>
+              <h3>Bajaj Finserv Health Ltd (BFHL)</h3>
+              <p class="muted">Bengaluru, Karnataka, India · on-site</p>
+            </div>
+            <span class="tag">Jan 2026 – Present</span>
+          </div>
+
+          <ol class="timeline">
+            <li class="now">
+              <span class="t-dot"></span>
+              <div>
+                <b>Associate Software Development Engineer</b>
+                <span class="muted">Full-time · Jul 2026 – Present</span>
+              </div>
+            </li>
+            <li>
+              <span class="t-dot"></span>
+              <div>
+                <b>SDE Intern</b>
+                <span class="muted">Internship · Jan 2026 – Jul 2026</span>
+              </div>
+            </li>
+          </ol>
+
+          <p class="lead">
+            I build an internal change-data-capture (CDC) platform made of three microservices. It captures database changes and publishes them as events to downstream systems.
+            Along the way, I cut database calls by about 66% during bulk member enrollment, and I set up Prometheus and Grafana monitoring and alerts for the services,
+            including an AI-agent proof of concept that flags unhealthy ones.
+          </p>
+          <div class="chips">
+            {['Java', 'Spring Boot', 'Kafka', 'Oracle (PL/SQL, AQ)', 'MongoDB', 'Grafana', 'Prometheus'].map((c) => <span class="chip">{c}</span>)}
+          </div>
+        </div>
+
+        <div class="edu">
+          <div>
+            <h3>Vellore Institute of Technology</h3>
+            <p class="muted">B.Tech, Computer Science and Engineering <span class="dot">·</span> CGPA 9.05 <span class="dot">·</span> 2022 – 2026</p>
+          </div>
+          <div>
+            <h3>Peepal Prodigy School, Coimbatore</h3>
+            <p class="muted">CBSE Class XII <span class="dot">·</span> 94% <span class="dot">·</span> 2020 – 2022</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="stack" class="wrap">
+        <h2><span class="num">{num()}</span> Stack</h2>
+        <div class="stack">
+          {stack.map((s) => (
+            <div class="stack-row">
+              <span class="k">{s.k}<span class="muted">:</span></span>
+              <span class="v">{s.v.map((x) => <span class="chip">{x}</span>)}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="projects" class="wrap">
+        <h2><span class="num">{num()}</span> Projects</h2>
+        <article class="project">
+          <header>
+            <h3>Trackify <span class="muted">— AI-powered expense tracker</span></h3>
+            <div class="plinks">
+              <a href={links.trackifyRepo} target="_blank" rel="noopener">GitHub ↗</a>
+              <a href={links.trackifyLive} target="_blank" rel="noopener">Live ↗</a>
+            </div>
+          </header>
+          <ul>
+            <li>Full-stack personal finance platform: Next.js (App Router) frontend, Prisma-managed PostgreSQL on Supabase, normalised schemas across transactions, accounts and budgets.</li>
+            <li>Authentication and route-level access control with Clerk and JWT session validation on protected endpoints.</li>
+            <li>Gemini-powered personalisation that analyses spending patterns and suggests what to change.</li>
+            <li>Containerised with Docker and deployed on GCP.</li>
+          </ul>
+          <div class="chips">
+            {['Next.js', 'Clerk', 'Supabase', 'Prisma', 'Gemini API', 'GCP', 'Docker'].map((c) => <span class="chip">{c}</span>)}
+          </div>
+        </article>
+      </section>
+
+      {patent && (
+        <section id="patent" class="wrap">
+          <h2><span class="num">{num()}</span> Patent</h2>
+          <article class="project">
+            <header>
+              <h3>{patent.title}</h3>
+              {patent.url && <div class="plinks"><a href={patent.url} target="_blank" rel="noopener">View record ↗</a></div>}
+            </header>
+            <dl class="meta">
+              <div><dt>Application / patent no.</dt><dd>{patent.number}</dd></div>
+              {patent.status && <div><dt>Status</dt><dd>{patent.status}</dd></div>}
+              {patent.applicant && <div><dt>Applicant</dt><dd>{patent.applicant}</dd></div>}
+              {patent.date && <div><dt>Dates</dt><dd>{patent.date}</dd></div>}
+              {patent.office && <div><dt>Office</dt><dd>{patent.office}</dd></div>}
+              {patent.inventors && <div><dt>Inventors</dt><dd>{patent.inventors}</dd></div>}
+            </dl>
+          </article>
+        </section>
+      )}
+
+      <section class="wrap two">
+        <div>
+          <h2><span class="num">{num()}</span> Certifications</h2>
+          <ul class="certs">
+            {certs.map((c) => <li><a href={c.u} target="_blank" rel="noopener">{c.n} <span>↗</span></a></li>)}
+          </ul>
+        </div>
+        <div>
+          <h2><span class="num">{num()}</span> Also</h2>
+          <ul class="certs plain">
+            <li>Led planning for <strong>DreamTeam</strong>, a 500+ participant event at Gravitas.</li>
+            <li>Built a cross-college collaboration platform at the <strong>HackBattle</strong> hackathon.</li>
+            <li>Core Committee Member, Dream Merchants VIT (Apr 2023 – Nov 2024).</li>
+            <li>Off-keyboard: tech blogs, music and the gym.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contact" class="wrap contact">
+        <h2><span class="num">{num()}</span> Let's talk</h2>
+        <p class="lead">Exploring backend engineering and AI. Always up for interesting problems and good teams.</p>
+        <a class="mail" href={`mailto:${links.email}`}>{links.email}</a>
+        <div class="cta center">
+          <a class="btn" href={links.linkedin} target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a class="btn" href={links.github} target="_blank" rel="noopener">GitHub ↗</a>
+          <a class="btn" href={links.leetcode} target="_blank" rel="noopener">LeetCode ↗</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <span>© 2026 Sachin Kumar N</span>
+    </footer>
+
+    <div id="term" class="term" hidden role="dialog" aria-label="Terminal" aria-modal="true">
+      <div class="term-box">
+        <div class="term-bar"><span>sachin@portfolio:~</span><button id="term-x" aria-label="Close">esc ✕</button></div>
+        <div id="term-out" class="term-out" aria-live="polite"></div>
+        <label class="term-in"><span>$</span><input id="term-input" autocomplete="off" spellcheck="false" aria-label="Terminal command" /></label>
+      </div>
+    </div>
+
+    <script>
+      import '../scripts/main';
+    </script>
+    <script is:inline define:vars={{ links }}>
+      window.__LINKS__ = links;
+    </script>
+  </body>
+</html>
